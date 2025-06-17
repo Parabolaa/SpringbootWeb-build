@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.SpringbootWeb.mapper.DeptMapper">
+    <insert id="insert">
+        insert into dept (name, create_time, update_time)
+        values (#{name}, #{createTime}, #{updateTime})
+    </insert>
+    <update id="updateById">
+        update dept
+        set name=#{name},
+            update_time=#{updateTime}
+        where id = #{id}
+    </update>
+    <select id="list" resultType="org.example.SpringbootWeb.pojo.Dept">
+        select id,name,update_time from dept
+    </select>
+    <select id="getById" resultType="org.example.SpringbootWeb.pojo.Dept">
+        select id, name, create_time, update_time
+        from dept
+        where id = #{id}
+    </select>
+    <delete id="deleteById">
+        delete from dept where id=#{id}
+    </delete>
+</mapper>
