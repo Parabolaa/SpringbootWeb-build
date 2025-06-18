@@ -3,12 +3,6 @@
 - **`pom.xml`**  
   Maven project descriptor: dependencies (Spring Boot, MyBatis, JWT, etc.), build plugins, project coordinates.
 
-- **Maven Wrapper (`mvnw`, `mvnw.cmd`)**  
-  Ensures a consistent Maven version for anyone building the project.
-
-- **`TrySBwebApplication.java`**  
-  The Spring Boot **main** class. Bootstraps the embedded server and auto-configuration.
-
 - **`anno/Log.java`**  
   Custom annotation for logging or method tracing.
 
@@ -17,7 +11,7 @@
   - `MyLog.java` – Custom meta-annotation used to mark methods for AOP.
 
 - **`config/WebConfig.java`**  
-  Spring MVC configuration: CORS, interceptors, message converters, static resource handlers.
+  Implements `WebMvcConfigurer` to register the `LoginCheckInterceptor`.
 
 - **`controller/`**  
   REST controllers handling HTTP requests:  
@@ -62,11 +56,9 @@
 - **`resources/`**  
   - **`application.properties` / `application.yml`** – Spring Boot & MyBatis configuration (datasource, mapper locations, JWT secret, etc.)  
   - **`mapper/*.xml`** – SQL mappings for MyBatis  
-  - **`static/`** – Static HTML/CSS/JS (e.g. `uploadForm.html`)  
+  - **`static/`** – Static HTML/CSS/JS
   - **`templates/`** – Server-side view templates (Thymeleaf, etc.), if any
 
-- **`test/`**  
-  - `TrySBwebApplicationTests.java` – Basic Spring Boot context-load test and unit tests.
 
 ---
 
