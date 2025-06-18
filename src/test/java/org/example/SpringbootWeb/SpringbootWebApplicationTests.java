@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootTest
-class TrySBwebApplicationTests {
+class SpringbootWebApplicationTests {
 
     @Test
     void contextLoads() {
