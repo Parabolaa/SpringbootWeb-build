@@ -1,5 +1,3 @@
----
-
 ## Description of Key Packages and Classes
 
 - **`pom.xml`**  
